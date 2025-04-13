@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Chat AI Ultra Clone',
-        theme: AppTheme.light,
+        theme: AppTheme.dark,
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: AppRouter.chat,
+        initialRoute: AppRouter.splash,
       ),
     );
   }
