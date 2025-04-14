@@ -1,26 +1,17 @@
 import 'package:http/http.dart' as http;
 import '../../../core/constants/app_constants.dart';
-import '../../models/response/api_response.dart';
+import 'api_response.dart';
 
 class NetworkManager {
   final String baseUrl;
   final http.Client _client;
 
-  NetworkManager({
-    required this.baseUrl,
-    http.Client? client,
-  }) : _client = client ?? http.Client();
+  NetworkManager({required this.baseUrl, http.Client? client}) : _client = client ?? http.Client();
 
-  Future<ApiResponse<T>> get<T>(
-    String endpoint, {
-    Map<String, String>? headers,
-  }) async {
+  Future<ApiResponse<T>> get<T>(String endpoint, {Map<String, String>? headers}) async {
     try {
       final response = await _client
-          .get(
-            Uri.parse('$baseUrl$endpoint'),
-            headers: headers,
-          )
+          .get(Uri.parse('$baseUrl$endpoint'), headers: headers)
           .timeout(const Duration(seconds: AppConstants.apiTimeoutDuration));
 
       if (response.statusCode == 200) {
@@ -40,11 +31,7 @@ class NetworkManager {
   }) async {
     try {
       final response = await _client
-          .post(
-            Uri.parse('$baseUrl$endpoint'),
-            headers: headers,
-            body: body,
-          )
+          .post(Uri.parse('$baseUrl$endpoint'), headers: headers, body: body)
           .timeout(const Duration(seconds: AppConstants.apiTimeoutDuration));
 
       if (response.statusCode == 200) {
@@ -60,4 +47,4 @@ class NetworkManager {
   void dispose() {
     _client.close();
   }
-} 
+}

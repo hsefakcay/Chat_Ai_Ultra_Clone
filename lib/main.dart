@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'core/init/theme/app_theme.dart';
+import 'core/theme/app_theme.dart';
 import 'features/chat/presentation/cubit/chat_cubit.dart';
-import 'core/injection_container.dart' as di;
+import 'core/di/injection_container.dart' as di;
 import 'product/init/app_start.dart';
 import 'product/routes/app_router.dart';
 
