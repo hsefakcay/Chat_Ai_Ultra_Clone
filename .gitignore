@@ -5,10 +5,14 @@
 .pub-cache/
 .pub/
 /build/
++
 # Flutter generated files
 .flutter-plugins
-.flutter-plugins-dependencieslu
+-.flutter-plugins-dependencieslu
++.flutter-plugins-dependencies
 **/generated_plugin_registrant.*
++**/generated_plugins.cmake
++**/GeneratedPluginRegistrant.swift
 # Miscellaneous
 *.class
 *.log
