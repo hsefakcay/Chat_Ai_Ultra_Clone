@@ -1,4 +1,4 @@
-import 'package:chat_ai_ultra_clone/core/injection_container.dart' as di;
+import 'package:chat_ai_ultra_clone/core/di/injection_container.dart' as di;
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../../core/constants/app_constants.dart';
