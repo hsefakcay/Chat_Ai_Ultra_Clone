@@ -1,3 +1,4 @@
+import 'package:chat_ai_ultra_clone/core/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../product/widgets/app_text_field.dart';
@@ -30,13 +31,12 @@ class _MessageInputState extends State<MessageInput> {
     return Container(
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-        color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withValues(),
-            spreadRadius: 1,
-            blurRadius: 3,
-            offset: const Offset(0, -1),
+            color: ColorConstants.backgroundSecondary,
+            spreadRadius: 0,
+            blurRadius: 5,
+            offset: const Offset(0, -2),
           ),
         ],
       ),
@@ -45,7 +45,7 @@ class _MessageInputState extends State<MessageInput> {
           Expanded(
             child: AppTextField(
               controller: _controller,
-              hintText: 'Type a message...',
+              hintText: ' Bir soru sor..',
               onSubmitted: _sendMessage,
             ),
           ),
@@ -58,7 +58,7 @@ class _MessageInputState extends State<MessageInput> {
                     state is ChatLoading
                         ? const SizedBox(width: 24, height: 24, child: CircularProgressIndicator())
                         : const Icon(Icons.send),
-                color: Theme.of(context).colorScheme.primary,
+                color: ColorConstants.textPrimary,
               );
             },
           ),

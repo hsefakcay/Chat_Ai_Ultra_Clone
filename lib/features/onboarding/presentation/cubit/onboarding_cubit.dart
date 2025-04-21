@@ -34,7 +34,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     } else {
       await saveOnboardingCompleted();
       if (context.mounted) {
-        Navigator.pushReplacementNamed(context, AppRouter.chat);
+        Navigator.pushReplacementNamed(context, AppRouter.home);
       }
     }
   }

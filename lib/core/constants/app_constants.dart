@@ -1,5 +1,4 @@
 class AppConstants {
-  static const String appName = 'Chat AI Ultra Clone';
 
   // API Constants
   static const int apiTimeoutDuration = 60;

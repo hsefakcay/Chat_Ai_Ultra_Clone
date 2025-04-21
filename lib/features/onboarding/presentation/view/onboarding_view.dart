@@ -1,7 +1,7 @@
 import 'package:chat_ai_ultra_clone/core/constants/color_constants.dart';
 import 'package:chat_ai_ultra_clone/core/constants/padding_constants.dart';
 import 'package:chat_ai_ultra_clone/features/onboarding/presentation/view/onboarding_view_mixin.dart';
-import 'package:chat_ai_ultra_clone/features/onboarding/presentation/widgets/pages/onboarding_page_content.dart';
+import 'package:chat_ai_ultra_clone/features/onboarding/presentation/view/pages/onboarding_page_content.dart';
 import 'package:chat_ai_ultra_clone/features/onboarding/presentation/widgets/congratulations_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -73,7 +73,6 @@ class _OnboardingPageState extends State<OnboardingPage> with PageControllerMixi
         vertical: PaddingConstants.pageVerticalPadding.vertical,
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
         children: [
           OnboardingContinueButton(
             onPressed: () => _handleContinueButtonPress(context, isLastPage),

@@ -21,4 +21,20 @@ class StringConstants {
   static const String termsOfService = 'Kullanım Koşullarını ';
   static const String termsAccept = 'kabul';
   static const String termsEnd = 'ediyorsunuz.';
+
+  // Home Screen
+  static const String appTitle = 'ChatAI Ultra';
+  static const String askQuestion = 'Bir soru sor...';
+  static const String ghibliStyle = 'Ghibli Tarzı';
+  static const String imageGenerator = 'Görsel Üretici';
+  static const String voiceChat = 'Sesli Sohbet';
+  static const String openAiGpt = 'OpenAI GPT-4';
+  static const String seeAll = 'Hepsini Gör';
+  static const String greeting = 'Merhaba, Ben ChatAI Ultra';
+  static const String helperText = 'Bugün size nasıl yardımcı olabilirim?';
+
+  // Bottom Navigation
+  static const String explore = 'Keşfet';
+  static const String home = 'Ana Sayfa';
+  static const String chats = 'Sohbetler';
 }

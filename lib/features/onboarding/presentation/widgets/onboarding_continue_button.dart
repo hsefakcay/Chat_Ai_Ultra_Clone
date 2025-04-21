@@ -20,10 +20,13 @@ class OnboardingContinueButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const SizedBox(width: 6),
+              SizedBox(width: 6),
               Center(
                 child: Padding(
-                  padding: isLastPage ? EdgeInsets.all(16) : EdgeInsets.all(14.0),
+                  padding:
+                      isLastPage
+                          ? EdgeInsets.symmetric(horizontal: 16, vertical: 16)
+                          : EdgeInsets.symmetric(horizontal: 10, vertical: 14),
                   child: Text(
                     isLastPage ? StringConstants.tryFree : StringConstants.onboardingContinueButton,
                     style:
