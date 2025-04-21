@@ -100,14 +100,17 @@ class FeaturesPage extends StatelessWidget {
                       maxLines: 2,
                     ),
                   ),
-                  Image.asset(
-                    feature.iconPath,
-                    width: 150,
-                    height: 110,
-                    fit: BoxFit.fitHeight,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Icon(Icons.error_outline, size: 48);
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: Image.asset(
+                      feature.iconPath,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.width * 0.4,
+                      fit: BoxFit.contain,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Icon(Icons.error_outline, size: 48);
+                      },
+                    ),
                   ),
                 ],
               ),

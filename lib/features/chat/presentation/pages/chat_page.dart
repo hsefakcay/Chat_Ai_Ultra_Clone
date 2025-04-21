@@ -1,6 +1,6 @@
+import 'package:chat_ai_ultra_clone/core/constants/string_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/constants/app_constants.dart';
 import '../cubit/chat_cubit.dart';
 import '../widgets/message_input.dart';
 import '../widgets/message_list.dart';
@@ -11,11 +11,7 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(AppConstants.appName),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Colors.white,
-      ),
+      appBar: AppBar(title: const Text(StringConstants.openAiGpt)),
       body: Column(
         children: [
           Expanded(

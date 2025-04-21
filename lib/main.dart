@@ -1,3 +1,5 @@
+import 'package:chat_ai_ultra_clone/features/chat_history/presentation/bloc/chat_history_bloc.dart';
+import 'package:chat_ai_ultra_clone/features/discover/presentation/bloc/discover_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/theme/app_theme.dart';
@@ -16,8 +18,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => di.sl<ChatCubit>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => di.sl<ChatCubit>()),
+        BlocProvider(create: (_) => di.sl<ChatHistoryBloc>()),
+        BlocProvider(create: (_) => di.sl<DiscoverBloc>()),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Chat AI Ultra Clone',

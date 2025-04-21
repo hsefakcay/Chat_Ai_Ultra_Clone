@@ -20,7 +20,10 @@ class OnboardingPageIndicator extends StatelessWidget {
             height: 8,
             width: MediaQuery.sizeOf(context).width * 0.15,
             decoration: BoxDecoration(
-              color: state.currentPage == index ? ColorConstants.primary : ColorConstants.darkGrey,
+              color:
+                  state.currentPage == index
+                      ? ColorConstants.primary
+                      : ColorConstants.backgroundDark,
               borderRadius: BorderRadius.circular(5),
             ),
           ),
